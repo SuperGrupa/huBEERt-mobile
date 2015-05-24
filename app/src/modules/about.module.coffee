@@ -10,3 +10,4 @@ angular.module 'huBEERt.about', ['ui.router']
         "about-tab":
           templateUrl: "src/modules/about/about.template.html"
       parent: 'tab'
+      controller: 'AboutCtrl'

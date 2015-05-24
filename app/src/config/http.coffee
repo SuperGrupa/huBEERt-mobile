@@ -1,7 +1,11 @@
 app = angular.module(GLOBALS.ANGULAR_APP_NAME)
 
 
-app.config ($httpProvider) ->
+app.config ($httpProvider, RestangularProvider) ->
+  RestangularProvider.setBaseUrl('http://localhost:3000/api/v1/')
+  RestangularProvider.setRequestSuffix('')
+  RestangularProvider.setDefaultHeaders({'Content-Type': 'application/json'})
+
   # Combine multiple $http requests into one $applyAsync (boosts performance)
   $httpProvider.useApplyAsync(true)
 

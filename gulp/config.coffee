@@ -20,6 +20,8 @@ module.exports = new class GulpConfig
 
         AVAILABLE_PLATFORMS: ["ios", "android"]
 
+        API_URL: 'http://localhost:3000/'
+
         # The name of your angular app you're going to use in `angular.module("")`
         ANGULAR_APP_NAME: "ionicstarter"
 
@@ -178,6 +180,8 @@ module.exports = new class GulpConfig
           "assets/components/angular-animate/angular-animate.js"
           "assets/components/angular-sanitize/angular-sanitize.js"
           "assets/components/angular-ui-router/release/angular-ui-router.js"
+          'assets/components/restangular/dist/restangular.js'
+          'assets/components/underscore/underscore.js'
           "assets/components/ionic/release/js/ionic-angular.js"
 
           # Here add any vendor files that should be included in vendor.js
