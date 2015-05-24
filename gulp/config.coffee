@@ -98,8 +98,8 @@ module.exports = new class GulpConfig
       development: {
         ENV: "development"
 
-        BUNDLE_ID: "com.jtomaszewski.ionicstarter.development"
-        BUNDLE_NAME: "IonicStarterDev"
+        BUNDLE_ID: "huBEERt-mobile"
+        BUNDLE_NAME: "huBEERt"
 
         # Automatically connect to weinre on application's startup
         # (this way you can debug your application on your PC even if it's running from mobile ;) )
@@ -110,8 +110,8 @@ module.exports = new class GulpConfig
       production: {
         ENV: "production"
 
-        BUNDLE_ID: "com.jtomaszewski.ionicstarter.production"
-        BUNDLE_NAME: "IonicStarter"
+        BUNDLE_ID: "huBEERt-mobile"
+        BUNDLE_NAME: "huBEERt"
 
         COMPRESS_ASSETS: true
 
@@ -189,16 +189,20 @@ module.exports = new class GulpConfig
           "assets/components/angulartics/src/angulartics-ga-cordova.js"
         ]
         app: [
-          'app/js/config/**/*.coffee' # initialize & configure the angular's app
-          'app/js/*/**/*.coffee'      # include all angular submodules (like controllers, directives, services)
-          'app/js/routes.coffee'      # app.config - set routes
+          'app/src/config/**/*.coffee' # initialize & configure the angular's app
+          'app/src/routes.coffee'
+          'app/src/*/**/*.module.coffee'
+          'app/src/*/**/*.service.coffee'
+          'app/src/*/**/*.factory.coffee'
+          'app/src/*/**/*.controller.coffee'
+          'app/src/*/**/*.directive.coffee'
         ]
         tests:
           e2e: [
             'test/e2e/*_test.coffee'
           ]
-      templates: ['app/templates/**/*.jade']
-      views: ['app/**/*.jade', '!app/templates/**/*.jade']
+      templates: ['app/**/*.template.jade']
+      views: ['app/**/*.jade', '!app/**/*.template.jade']
     }
 
     @DESTINATIONS = {

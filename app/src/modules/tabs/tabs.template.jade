@@ -7,11 +7,11 @@ html
         navigation history that also transitions its views in and out.
     ion-tabs.tabs-icon-top.tabs-default.tabs-positive
       // Pets Tab
-      ion-tab(title='Pets', icon='icon ion-home', href='#/tab/pets')
+      ion-tab(title='Pets', icon='icon ion-home', ui-sref="tab.pet-index")
         ion-nav-view(name='pets-tab')
       // Adopt Tab
       ion-tab(title='Adopt', icon='icon ion-heart', href='#/tab/adopt')
         ion-nav-view(name='adopt-tab')
       // About Tab
-      ion-tab(title='About', icon='icon ion-search', href='#/tab/about')
+      ion-tab(title='About', icon='icon ion-search', ui-sref="about")
         ion-nav-view(name='about-tab')
