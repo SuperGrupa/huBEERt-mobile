@@ -1,4 +1,4 @@
-angular.module 'huBEERt', ['ui.router', 'huBEERt.about', 'huBEERt.pets', 'huBEERt.tabs', 'huBEERt.places', 'huBEERt.user']
+angular.module 'huBEERt', ['ui.router', 'huBEERt.tabs', 'huBEERt.places', 'huBEERt.user']
 
 .config ($stateProvider, $urlRouterProvider) ->
   # Ionic uses AngularUI Router which uses the concept of states
