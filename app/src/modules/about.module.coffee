@@ -4,10 +4,11 @@ angular.module 'huBEERt.about', ['ui.router']
 .config ($stateProvider, $urlRouterProvider) ->
 
   $stateProvider
-    .state "about",
-      url: "/about"
-      views:
-        "about-tab":
-          templateUrl: "src/modules/about/about.template.html"
-      parent: 'tab'
-      controller: 'AboutCtrl'
+    # .state "places",
+    #   url: "/search"
+    #   views:
+    #     "places-search":
+    #       templateUrl: "src/modules/places/search/places.search.template.html"
+    #       controller: 'PlacesSearchCtrl'
+    #   parent: 'tab'
+
