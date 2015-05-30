@@ -9,6 +9,8 @@ app.config ($ionicConfigProvider) ->
   # $ionicConfigProvider.navBar.alignTitle('center')
   # $ionicConfigProvider.navBar.positionPrimaryButtons('left')
   # $ionicConfigProvider.navBar.positionSecondaryButtons('right')
+  $ionicConfigProvider.tabs.position("bottom")
+  $ionicConfigProvider.tabs.style("standard")
 
   # Change views cache limit from 10 to 4
   $ionicConfigProvider.views.maxCache(4)

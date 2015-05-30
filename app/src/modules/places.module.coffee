@@ -20,14 +20,6 @@ angular.module 'huBEERt.places', ['ui.router']
           controller: "PlacesResultsCtrl"
       parent: 'tab'
 
-    .state "placesSearchGps",
-      url: "/search-gps"
-      views:
-        "places-search-gps":
-          templateUrl: "src/modules/places/search-gps/places.search-gps.template.html"
-          controller: "PlacesSearchGpsCtrl"
-      parent: 'tab'
-
     .state "placesFavourites",
       url: "/favourites"
       views:
