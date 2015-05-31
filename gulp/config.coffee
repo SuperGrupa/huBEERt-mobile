@@ -182,6 +182,7 @@ module.exports = new class GulpConfig
           'assets/components/restangular/dist/restangular.js'
           'assets/components/underscore/underscore.js'
           "assets/components/ionic/release/js/ionic-angular.js"
+          "assets/js/tabSlideBox.js"
 
           # Here add any vendor files that should be included in vendor.js
           # (f.e. bower components)
