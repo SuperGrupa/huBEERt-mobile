@@ -1,18 +1,11 @@
 {
-  "name": "ionic-cordova-gulp-seed",
-  "version": "2.2.12",
-  "description": "Ionic & Cordova & Gulp seed with organized code, tests, bower support and some other stuff. Originated from ionic-angular-cordova-seed.",
+  "name": "huBEERt-mobile",
+  "version": "0.0.1",
+  "description": "Mobile application for huBEERt project ",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jtomaszewski/ionic-cordova-gulp-seed"
+    "url": "https://github.com/SuperGrupa/huBEERt-mobile"
   },
-  "author": {
-    "name": "Jacek Tomaszewski",
-    "email": "jacek@jtom.me",
-    "url": "http://jtom.me/"
-  },
-  "keywords": ["seed", "ionic", "gulp", "cordova"],
-  "author": "jacek@jtom.me",
   "license": "MIT",
   "peerDependencies": {
     "browser-sync": "~2.0.0-rc3",

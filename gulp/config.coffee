@@ -75,7 +75,7 @@ module.exports = new class GulpConfig
         PROXY_ROUTE: null
 
         # If true, we'll open the app in the browser after running the server.
-        OPEN_IN_BROWSER: true
+        OPEN_IN_BROWSER: false
 
         # Report errors to Rollbar (rollbar.com)
         ROLLBAR_CLIENT_ACCESS_TOKEN: null # "aaa"

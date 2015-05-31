@@ -1,11 +1,7 @@
 {
-  "name": "ionic-cordova-gulp-seed",
-  "homepage": "https://github.com/jtomaszewski/ionic-cordova-gulp-seed",
-  "authors": [
-    "Jacek Tomaszewski <jacek@jtom.me>",
-    "driftyco"
-  ],
-  "description": "Ionic & Cordova & Gulp seed with organized code, tests, bower support and some other stuff. Originated from ionic-angular-cordova-seed.",
+  "name": "huBEERt-mobile",
+  "homepage": "https://github.com/SuperGrupa/huBEERt-mobile",
+  "description": "Mobile application for huBEERt project ",
   "license": "MIT",
   "private": false,
   "ignore": [
