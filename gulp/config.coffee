@@ -20,7 +20,7 @@ module.exports = new class GulpConfig
 
         AVAILABLE_PLATFORMS: ["ios", "android"]
 
-        API_URL: 'http://localhost:3000/'
+        API_URL: 'http://localhost:3000/api/v1'
 
         # The name of your angular app you're going to use in `angular.module("")`
         ANGULAR_APP_NAME: "ionicstarter"
@@ -141,6 +141,7 @@ module.exports = new class GulpConfig
     # The filtered globals will be available under GulpConfig.PUBLIC_GLOBALS.
     @_PUBLIC_GLOBALS_KEYS = [
       "ANGULAR_APP_NAME"
+      "API_URL"
       "BUNDLE_NAME"
       "BUNDLE_VERSION"
       "CODE_VERSION"
