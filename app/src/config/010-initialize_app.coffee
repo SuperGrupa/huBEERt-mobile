@@ -6,5 +6,6 @@ app = angular.module(GLOBALS.ANGULAR_APP_NAME, [
   "angulartics.google.analytics"
   "angulartics.google.analytics.cordova"
   'restangular'
-  "huBEERt"
+  "huBEERt.config"
+  "huBEERt.main"
 ])

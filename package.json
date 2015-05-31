@@ -26,9 +26,11 @@
     "gulp-if": "^1.2.5",
     "gulp-jade": "~0.4.2",
     "gulp-minify-css": "~0.4.5",
+    "gulp-ng-constant": "^0.2.0",
     "gulp-notify": "~0.6.2",
     "gulp-plumber": "^0.6.3",
     "gulp-protractor": "0.0.12",
+    "gulp-rename": "^1.2.0",
     "gulp-rollbar": "^0.1.1",
     "gulp-sass": "^1.2.4",
     "gulp-shell": "^0.2.5",
@@ -55,6 +57,7 @@
     "protractor-coffee-preprocessor": "0.0.1",
     "q": "^1.0.0",
     "run-sequence": "~0.3.6",
-    "weinre": "^2.0.0-pre-I0Z7U9OV"
+    "weinre": "^2.0.0-pre-I0Z7U9OV",
+    "yargs": "^3.7.0"
   }
 }

@@ -20,10 +20,8 @@ module.exports = new class GulpConfig
 
         AVAILABLE_PLATFORMS: ["ios", "android"]
 
-        API_URL: 'http://localhost:3000/api/v1'
-
         # The name of your angular app you're going to use in `angular.module("")`
-        ANGULAR_APP_NAME: "ionicstarter"
+        ANGULAR_APP_NAME: "huBEERt"
 
         # Base path to this project's directory. Generated automatically.
         APP_ROOT: exec("pwd").stdout.trim() + "/"
@@ -195,6 +193,7 @@ module.exports = new class GulpConfig
         ]
         app: [
           'app/src/config/**/*.coffee' # initialize & configure the angular's app
+          'config/config.js'
           'app/src/routes.coffee'
           'app/src/*/**/*.module.coffee'
           'app/src/*/**/*.service.coffee'

@@ -1,10 +1,8 @@
 app = angular.module(GLOBALS.ANGULAR_APP_NAME)
 
 
-app.config ($httpProvider, RestangularProvider) ->
-  console.log GLOBALS.ANGULAR_APP_NAME
-  console.log GLOBALS.API_URL
-  RestangularProvider.setBaseUrl(GLOBALS.API_URL)
+app.config ($httpProvider, RestangularProvider, ENVIR) ->
+  RestangularProvider.setBaseUrl(ENVIR.API_URL)
   RestangularProvider.setRequestSuffix('')
   RestangularProvider.setDefaultHeaders({'Content-Type': 'application/json'})
 

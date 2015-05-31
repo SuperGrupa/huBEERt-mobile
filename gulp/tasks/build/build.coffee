@@ -16,7 +16,7 @@ gulp.task "build-debug", false, ["set-debug", "build"]
 
 
 gulp.task "build", "Compile all the contents of ./#{GLOBALS.BUILD_DIR}/", (cb) ->
-  runSequence ["clean", "bower:install"],
+  runSequence ["config", "clean", "bower:install"],
     [
       "assets"
       "styles"
