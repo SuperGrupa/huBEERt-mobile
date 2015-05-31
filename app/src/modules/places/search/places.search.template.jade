@@ -3,4 +3,13 @@ html
     ion-view(view-title='Szukaj pubu/baru')
       ion-content(has-header='true', has-tabs='true')
         ion-list
-          |  search
+          .list.list-inset
+            label.item.item-input
+              i.icon.ion-search.placeholder-icon
+              input(type='text', placeholder='Szukaj', ng-model="form.string")
+          .row
+            .col
+              button.button.button-block.button-positive(ng-click="search()")
+                | Szukaj
+              button.button.button-block.button-positive.ion-location(ng-click="searchGps()")
+                |  Szukaj w pobliżu

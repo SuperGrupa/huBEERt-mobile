@@ -1,0 +1,9 @@
+html
+  body
+    ion-view
+      ion-nav-title
+        a.button.icon-left.ion-chevron-left.button-clear(ui-sref="placesSearchResults")
+        {{ place.name }}
+      ion-content(has-header='true', has-tabs='true')
+        ion-list
+          {{ place.description }}
