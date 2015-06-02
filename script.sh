@@ -1,2 +1,2 @@
 #!/bin/bash
-sed -i "66s/.*/    singleRun: true/" test/unit/karma.conf.coffee
+sed -i "41s/.*/    singleRun: true/" test/unit/karma.conf.coffee

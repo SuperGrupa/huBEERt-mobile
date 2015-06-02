@@ -32,7 +32,7 @@ gulp.task 'watch-test', false, ->
 
 gulp.task 'test:unit',
   "Run unit tests",
-  ["build-test", "watch-test"],
+  ["build-test"],
   ->
     args = ['start', 'test/unit/karma.conf.coffee']
     for name in ['browsers', 'reporters']

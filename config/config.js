@@ -1,9 +1,9 @@
 angular.module("huBEERt.config", [])
 
-.constant("ENV", {
-	"ENV_NAME": "production",
-	"BACKEND_URL": "https://lit-garden-6724.herokuapp.com",
-	"API_URL": "https://lit-garden-6724.herokuapp.com/api/v1/"
+.constant("ENVIR", {
+	"ENV_NAME": "development",
+	"BACKEND_URL": "http://192.168.0.10:3000",
+	"API_URL": "http://192.168.0.10:3000/api/v1/"
 })
 
 ;

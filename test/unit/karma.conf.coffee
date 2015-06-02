@@ -38,6 +38,8 @@ module.exports = (config) ->
     # f.e. Chrome, PhantomJS
     browsers: ['PhantomJS']
 
+    singleRun: false
+
     preprocessors:
       '**/*.coffee': ['coffee']
 
