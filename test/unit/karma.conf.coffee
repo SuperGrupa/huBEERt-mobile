@@ -16,9 +16,14 @@ module.exports = (config) ->
       # This is a concatenated list of all scripts from gulpfile.coffee
       # (we need to keep it up to date with it).
       "#{BUILD_DIR}/js/app_templates.js"
-      'app/js/config/**/*.coffee'
-      'app/js/*/**/*.coffee'
-      'app/js/routes.coffee'
+      'app/src/config/**/*.coffee'
+      'config/config.js'
+      'app/src/routes.coffee'
+      'app/src/*/**/*.module.coffee'
+      'app/src/*/**/*.service.coffee'
+      'app/src/*/**/*.factory.coffee'
+      'app/src/*/**/*.controller.coffee'
+      'app/src/*/**/*.directive.coffee'
 
       "test/unit/helpers/**/*.coffee"
       "test/unit/**/*.coffee"
