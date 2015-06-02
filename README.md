@@ -1,5 +1,6 @@
 huBEERt WebApp repository
 ===================================
+[![Travis CI](https://travis-ci.org/SuperGrupa/huBEERt-mobile.svg?branch=master)](https://travis-ci.org/SuperGrupa/huBEERt-mobile)
 ![Repo Size](https://reposs.herokuapp.com/?path=SuperGrupa/huBEERt-mobile)
 
 
