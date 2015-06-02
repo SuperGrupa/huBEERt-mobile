@@ -8,9 +8,9 @@ before_script:
   - chmod a+x script.sh
   - ./script.sh
   - npm install gulp
-  - npm install ionic
-  - npm install bower
-  - npm install codeclimate-test-reporter
+  - npm install -g ionic
+  - npm install -g bower
+  - npm install -g codeclimate-test-reporter
   - bower install
   - gulp build
 after_script:
