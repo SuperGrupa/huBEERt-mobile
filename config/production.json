@@ -1,7 +1,7 @@
 {
   "name": "huBEERt.config",
   "constants": {
-    "ENV":
+    "ENVIR":
     {
       "ENV_NAME": "production",
       "BACKEND_URL": "https://lit-garden-6724.herokuapp.com",

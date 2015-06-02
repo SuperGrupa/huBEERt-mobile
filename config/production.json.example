@@ -1,7 +1,7 @@
 { 
   "name": "huBEERt.config",
   "constants": {
-    "ENV":
+    "ENVIR":
     {
       "ENV_NAME": "production",
       "BACKEND_URL": "http://api.hubeert.com",
