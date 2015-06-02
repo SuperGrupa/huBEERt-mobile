@@ -5,14 +5,25 @@ html
         a.button.icon-left.ion-chevron-left.button-clear(ui-sref="placesSearchResults")
         | {{place.name}}
       ion-content(has-header='true', has-tabs='true')
-        tab-slide-box(tab="0")
-          .tsb-icons
+        .item.item-avatar
+          img(src="/img/map.png")
+          p {{ address.street }} {{ address.number }}
+          p {{ address.city }}
+        .item.item-body
+          img.full-image(src='img/beer.jpg')
+          p {{place.description}}
+          p
+            a.subdued(href='') tel.: {{place.phone}}
+          p
+            a.subdued(href='') email: {{place.email}}
+        tab-slide-box(tab="2", slide-tabs-scrollable="false")
+          #tabs.tsb-icons
             .tsb-ic-wrp
               ion-scroll.tsb-hscroll(direction='x')
-                a(href='') Oferta
-                a(href='') Opinie
-                a(href='') Galeria
-                a(href='') Co się dzieje?
+                a(href='', ng-click="scrollToTabs()") Oferta
+                a(href='', ng-click="scrollToTabs()") Opinie
+                a(href='', ng-click="scrollToTabs()") Galeria
+                a(href='', ng-click="scrollToTabs()") Co się dzieje?
             ion-slide-box(show-pager='false', on-slide-changed='slideHasChanged($index)')
               ion-slide
                 | {{ place.description }}
