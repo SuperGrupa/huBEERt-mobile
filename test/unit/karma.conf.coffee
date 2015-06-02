@@ -38,12 +38,10 @@ module.exports = (config) ->
     # CLI --reporters progress
     reporters: ['osx', 'dots']
 
-    autoWatch: true
+    singleRun: false
 
     # f.e. Chrome, PhantomJS
     browsers: ['PhantomJS']
-
-    singleRun: false
 
     preprocessors:
       '**/*.coffee': ['coffee']
