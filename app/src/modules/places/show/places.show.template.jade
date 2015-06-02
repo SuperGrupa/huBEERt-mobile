@@ -18,7 +18,7 @@ html
             a.subdued(href='') email: {{place.email}}
           div(ng-repeat="opening_hour in opening_hours")
             small(ng-repeat="day in opening_hour.days")
-                {{day.name}} 
+              | {{day.name}} 
             small {{opening_hour.from}} - 
             small(ng-show="opening_hour.to") {{opening_hour.to}}
             small(ng-hide="opening_hour.to") Do ostatniego klienta
