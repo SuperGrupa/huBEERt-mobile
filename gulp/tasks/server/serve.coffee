@@ -18,7 +18,7 @@ gulp.task 'serve', "Run browser-sync server with livereload in ./#{GLOBALS.BUILD
     server:
       baseDir: GLOBALS.BUILD_DIR
       middleware: middlewares
-    port: GLOBALS.HTTP_SERVER_PORT
+    port: process.env.PORT || GLOBALS.HTTP_SERVER_PORT
     open: !!+GLOBALS.OPEN_IN_BROWSER
     files: DESTINATIONS.livereload
   })
