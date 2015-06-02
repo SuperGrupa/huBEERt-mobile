@@ -43,3 +43,27 @@ angular.module("huBEERt.places")
                 console.log err
                 deferred.reject(err)
         deferred.promise
+
+    getOpeningHours: (id) ->
+        deferred = $q.defer()
+        if _.isNaN(id) || _.isUndefined(id)
+            deferred.resolve({})
+        else
+            Restangular.one('places', id).getList('opening_hours').then (result) ->
+                deferred.resolve(result)
+            , (error) ->
+                AlertsServ.logError(error)
+                deferred.reject(error)
+        deferred.promise
+
+    getAddress: (id) ->
+        deferred = $q.defer()
+        if _.isNaN(id) || _.isUndefined(id)
+            deferred.resolve({})
+        else
+            Restangular.one('places', id).customGET('address').then (result) ->
+                deferred.resolve(result)
+            , (error) ->
+                AlertsServ.logError(error)
+                deferred.reject(error)
+        deferred.promise
