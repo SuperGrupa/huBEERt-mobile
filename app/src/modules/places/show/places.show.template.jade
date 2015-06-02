@@ -1,0 +1,41 @@
+html
+  body
+    ion-view
+      ion-nav-title
+        a.button.icon-left.ion-chevron-left.button-clear(ui-sref="placesSearchResults")
+        | {{place.name}}
+      ion-content(has-header='true', has-tabs='true')
+        .item.item-avatar
+          img(src="/img/map.png")
+          p {{ address.street }} {{ address.number }}
+          p {{ address.city }}
+        .item.item-body
+          img.full-image(src='img/beer.jpg')
+          p {{place.description}}
+          p
+            a.subdued(href='') tel.: {{place.phone}}
+          p
+            a.subdued(href='') email: {{place.email}}
+          div(ng-repeat="opening_hour in opening_hours")
+            small(ng-repeat="day in opening_hour.days")
+              | {{day.name}} 
+            small {{opening_hour.from}} - 
+            small(ng-show="opening_hour.to") {{opening_hour.to}}
+            small(ng-hide="opening_hour.to") Do ostatniego klienta
+        tab-slide-box(tab="2", slide-tabs-scrollable="false")
+          #tabs.tsb-icons
+            .tsb-ic-wrp
+              ion-scroll.tsb-hscroll(direction='x')
+                a(href='', ng-click="scrollToTabs()") Oferta
+                a(href='', ng-click="scrollToTabs()") Opinie
+                a(href='', ng-click="scrollToTabs()") Galeria
+                a(href='', ng-click="scrollToTabs()") Co się dzieje?
+            ion-slide-box(show-pager='false', on-slide-changed='slideHasChanged($index)')
+              ion-slide
+                | {{ place.description }}
+              ion-slide
+                h1 Games content
+              ion-slide
+                h1 Mail content
+              ion-slide
+                h1 Car content

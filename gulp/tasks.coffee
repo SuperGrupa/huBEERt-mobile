@@ -1,3 +1,4 @@
+require "./tasks/base/env"
 require "./tasks/base/clean"
 require "./tasks/base/bower-install"
 

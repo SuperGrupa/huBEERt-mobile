@@ -1,5 +1,17 @@
 @import "ionic.css";
+@import "tabSlideBox.css";
 
 body {
   background-color: gray;
+}
+
+// .scroll {
+//   height: 92%;
+// }
+
+.results {
+  img {
+    height: 50px;
+    width: 50px;
+  }
 }

@@ -21,7 +21,7 @@ module.exports = new class GulpConfig
         AVAILABLE_PLATFORMS: ["ios", "android"]
 
         # The name of your angular app you're going to use in `angular.module("")`
-        ANGULAR_APP_NAME: "ionicstarter"
+        ANGULAR_APP_NAME: "huBEERt"
 
         # Base path to this project's directory. Generated automatically.
         APP_ROOT: exec("pwd").stdout.trim() + "/"
@@ -73,7 +73,7 @@ module.exports = new class GulpConfig
         PROXY_ROUTE: null
 
         # If true, we'll open the app in the browser after running the server.
-        OPEN_IN_BROWSER: true
+        OPEN_IN_BROWSER: false
 
         # Report errors to Rollbar (rollbar.com)
         ROLLBAR_CLIENT_ACCESS_TOKEN: null # "aaa"
@@ -98,8 +98,8 @@ module.exports = new class GulpConfig
       development: {
         ENV: "development"
 
-        BUNDLE_ID: "com.jtomaszewski.ionicstarter.development"
-        BUNDLE_NAME: "IonicStarterDev"
+        BUNDLE_ID: "huBEERt-mobile"
+        BUNDLE_NAME: "huBEERt"
 
         # Automatically connect to weinre on application's startup
         # (this way you can debug your application on your PC even if it's running from mobile ;) )
@@ -110,8 +110,8 @@ module.exports = new class GulpConfig
       production: {
         ENV: "production"
 
-        BUNDLE_ID: "com.jtomaszewski.ionicstarter.production"
-        BUNDLE_NAME: "IonicStarter"
+        BUNDLE_ID: "huBEERt-mobile"
+        BUNDLE_NAME: "huBEERt"
 
         COMPRESS_ASSETS: true
 
@@ -139,6 +139,7 @@ module.exports = new class GulpConfig
     # The filtered globals will be available under GulpConfig.PUBLIC_GLOBALS.
     @_PUBLIC_GLOBALS_KEYS = [
       "ANGULAR_APP_NAME"
+      "API_URL"
       "BUNDLE_NAME"
       "BUNDLE_VERSION"
       "CODE_VERSION"
@@ -178,7 +179,10 @@ module.exports = new class GulpConfig
           "assets/components/angular-animate/angular-animate.js"
           "assets/components/angular-sanitize/angular-sanitize.js"
           "assets/components/angular-ui-router/release/angular-ui-router.js"
+          'assets/components/restangular/dist/restangular.js'
+          'assets/components/underscore/underscore.js'
           "assets/components/ionic/release/js/ionic-angular.js"
+          "assets/js/tabSlideBox.js"
 
           # Here add any vendor files that should be included in vendor.js
           # (f.e. bower components)
@@ -189,16 +193,21 @@ module.exports = new class GulpConfig
           "assets/components/angulartics/src/angulartics-ga-cordova.js"
         ]
         app: [
-          'app/js/config/**/*.coffee' # initialize & configure the angular's app
-          'app/js/*/**/*.coffee'      # include all angular submodules (like controllers, directives, services)
-          'app/js/routes.coffee'      # app.config - set routes
+          'app/src/config/**/*.coffee' # initialize & configure the angular's app
+          'config/config.js'
+          'app/src/routes.coffee'
+          'app/src/*/**/*.module.coffee'
+          'app/src/*/**/*.service.coffee'
+          'app/src/*/**/*.factory.coffee'
+          'app/src/*/**/*.controller.coffee'
+          'app/src/*/**/*.directive.coffee'
         ]
         tests:
           e2e: [
             'test/e2e/*_test.coffee'
           ]
-      templates: ['app/templates/**/*.jade']
-      views: ['app/**/*.jade', '!app/templates/**/*.jade']
+      templates: ['app/**/*.template.jade']
+      views: ['app/**/*.jade', '!app/**/*.template.jade']
     }
 
     @DESTINATIONS = {
