@@ -131,7 +131,7 @@ angular.module('tabSlideBox', [])
 								leftStr = 0;
 							}
 							//Use this scrollTo, so when scrolling tab manually will not flicker
-							ionicScrollDelegate.scrollTo(Math.abs(leftStr), 0, true);
+							//ionicScrollDelegate.scrollTo(Math.abs(leftStr), 0, true);
 						}
 					}
 					}
