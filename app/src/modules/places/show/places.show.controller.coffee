@@ -4,5 +4,6 @@ angular.module('huBEERt.places')
 
   PlacesServ.getOne($stateParams.id).then (result) ->
     $scope.place = result
+    console.log result
 
 

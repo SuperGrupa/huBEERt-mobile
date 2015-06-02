@@ -3,9 +3,17 @@ html
     ion-view
       ion-nav-title
         a.button.icon-left.ion-chevron-left.button-clear(ui-sref="placesSearch")
-        {{ searching.title }}
+        | {{ searching.title }}
       ion-content(has-header='true', has-tabs='true')
         ion-list
-          ion-item(ng-repeat='place in places', type='item-text-wrap', href='#/tab/places/{{place.id}}')
-            h3 &lcub;&lcub;place&period;name&rcub;&rcub;
-            p &lcub;&lcub;pet&period;description&rcub;&rcub;
+          ion-item.item-thumbnail-left(ng-repeat='place in places', type='item-text-wrap', href='#/tab/places/{{place.id}}')
+            img(src="img/beer.jpg")
+            h2 {{ place.name }}
+            p {{ place.address.street }} {{ place.address.number }}
+            p {{ place.address.city }}
+
+            //- .col-20
+            //-   img(src="img/beer.jpg")
+            //- .col-80
+            //-   h3 &lcub;&lcub;place&period;name&rcub;&rcub;
+            //-   p &lcub;&lcub;pet&period;description&rcub;&rcub;
