@@ -1,33 +1,27 @@
 language: node_js
 node_js:
-  - "0.10"
+- '0.10'
 script:
-  - gulp test:unit
+- gulp test:unit
 before_script:
-  - cp config/development.json.example config/development.json
-  - chmod a+x script.sh
-  - ./script.sh
-  - npm install -g gulp
-  - npm install -g ionic
-  - npm install -g bower
-  - npm install -g codeclimate-test-reporter
-  - bower install
-  - gulp build
+- cp config/development.json.example config/development.json
+- chmod a+x script.sh
+- "./script.sh"
+- npm install -g gulp
+- npm install -g ionic
+- npm install -g bower
+- npm install -g codeclimate-test-reporter
+- bower install
+- gulp build
 after_script:
-  - codeclimate < coverage/phantomjs/lcov.info
+- codeclimate < coverage/phantomjs/lcov.info
 addons:
   code_climate:
     repo_token: 9bc93c16ae561b78e7f3933e6c0d25be1ea60cff3e101df657f70ded923a1333
 notifications:
   email: false
 deploy:
-  provider:
-    provider: cloudfoundry
-  api: https://api.de.a9s.eu
-  username: dakolech@gmail.com
-  password:
-    secure: HTb2Mr5WIwMan8HzYVQ4Rq2uMJPYAKClePBK/Z/90SkFAjRnZvB8xdPtgetaadYwLPIrBpIuEZavsUUJoXIX8VPo/BVUbkq7kHqG26yO3DRlI7XMDQ+zV2ywGyRx3aBZcblsigcE+tbOz2pSsbrHDfyKVMD2CDf8dOAVI8oU9ys=
-  organization: ''
-  space: test
-  on:
-    repo: SuperGrupa/huBEERt-webApp
+  provider: heroku
+  app: murmuring-sierra-3222
+  api_key:
+    secure: d5Iz3AVLGP+033zbmndIxzyj3ZzTEwpk+1UfSe595hh0ddhkHQfQ7D6iQJCp9TlO34apFVnqVbQEnN+LqfcFYsR6M+u6hqwJS7msQXEwl9Zf3DVHOoTby8ga99UfjxuKMBsnUOQ0bxIjhYcsJJbESiYXEICWxQ/MAYshoiaiOznSxlnYL+oWRLHu0Jme8DYErLvYmEuMb6bzv9hcbRhPz7sJOKOyeh7LXjo67dDcoYAhwT+26Bsx6S641CClkJTu9eHan4/eLeL1OfWtTDpyBdMCbQSfn6K+2+5z6Fls8UgtxgynxfANvEl+JUkuOBd8xnp295aC1VNL+ZLLqTXW5NckyTe/F1LlwjQeaKnL9HaOxdzvsBwHq2ohmQKWdnf9/rwvtqMRqJ/C6jTWG3sSAupKCENHNt75xQuYDvHnSGMDIcr/V8HWkpSLZwFoI7y/aayGsArKT32vIde76il9IAOo7NLSIXSiYV16tp55H8kIRtKp8QlE2N3hKWDUCVfAEZ5JXT7H8jfGMsRPUHquc8HM2MUAFdMcaf1B8L7s8FGrAEiDZvmWFUXC3ClR7uVTyRqLTKq3ZiLfWAQ7qJh1PGkTMT1E14+ZHbn3FCm8HrsKZ6mK2YJKhM0VfjVqiXyh47r4zAwke6v9lVUlYS4xc2hyAjrRqat9stFJGzMJYOE=
