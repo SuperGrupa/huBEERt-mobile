@@ -5,10 +5,6 @@ angular.module('huBEERt.places')
   $scope.searching = PlacesServ.getSearchingAttr()
 
   PlacesServ.getAll().then (result) ->
-    if !!result
-      PlacesServ.search().then (result) ->
-        $scope.places = result
-    else
-      $scope.places = result
+    $scope.places = result
 
 

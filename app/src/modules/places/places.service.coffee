@@ -25,8 +25,9 @@ angular.module("huBEERt.places")
     search: (form) ->
         deferred = $q.defer()
         searchForm = form
-        this.updateAll().then ->
-            deferred.resolve(places)
+        Restangular.all("").customGET("", {q: form.string, city: form.city}).then (result) ->
+            places = result
+            deferred.resolve(result)
         , (err) ->
             console.log err
             deferred.reject(err)
